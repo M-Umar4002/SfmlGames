@@ -19,15 +19,15 @@ int main() {
     window.setFramerateLimit(60);
 
     CircleShape player(55.f);
-    player.setFillColor(Color::Green), player.setPosition(window.getSize().x/2.f - player.getRadius(), window.getSize().y - player.getRadius()*2.f - 15.f);
+    player.setFillColor(Color::Blue), player.setPosition(window.getSize().x/2.f - player.getRadius(), window.getSize().y - player.getRadius()*2.f - 15.f);
 
-    CircleShape projectile(7.f);
+    CircleShape projectile(10.f);
     projectile.setFillColor(Color::Red);
 
     vector<CircleShape> projectiles;
 
     RectangleShape enemy(Vector2f(60.f, 60.f));
-    enemy.setFillColor(Color::Blue);
+    enemy.setFillColor(Color::Green);
 
     vector<RectangleShape> enemies;
 
@@ -56,7 +56,7 @@ void update(RenderWindow &window, CircleShape &player, vector<CircleShape> &proj
 }
 
 void draw(RenderWindow &window, CircleShape &player, vector<CircleShape> &projectiles, vector<RectangleShape> &enemies) {
-    window.clear();
+    window.clear(Color::White);
 
     window.draw(player);
 
