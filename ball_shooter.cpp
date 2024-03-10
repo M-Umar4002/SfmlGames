@@ -56,7 +56,7 @@ void update(RenderWindow &window, CircleShape &player, vector<CircleShape> &proj
 }
 
 void draw(RenderWindow &window, CircleShape &player, vector<CircleShape> &projectiles, vector<RectangleShape> &enemies) {
-    window.clear(Color::White);
+    window.clear();
 
     window.draw(player);
 
